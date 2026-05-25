@@ -6,13 +6,13 @@
     <title>Gunungkidul - Jelajahi Surga Tersembunyi Yogyakarta</title>
     <link rel="stylesheet" href="../style/beranda.css">
 </head>
-<body>
 
+<body>
     <nav class="navbar" id="navbar">
         <div class="navbar_container">
 
             <div class="logo_navbar">
-                <img src="../image/logo.png" class="logo_img" alt="logo">
+                <img src="../asset/image/logo.png" class="logo_img" alt="logo">
                 <div class="logo_text">
                     <div class="logo_name">Gunung Kidul</div>
                     <div class="tagline_logo">Natural Explorer</div>
@@ -47,7 +47,7 @@
 
     <section class="hero">
         <div class="hero_background">
-            <img src="../image/herobg.png" alt="Gunungkidul background" loading="eager">
+            <img src="../asset/image/herobg.png" alt="Gunungkidul background" loading="eager">
         </div>
         <div class="overlay"></div>
 
@@ -95,5 +95,406 @@
             </div>
         </div>
     </section>
+
+    <section class="tentang">
+    <div class="tentang_container">
+
+        <div class="tentang_left">
+            <span class="tentang_label">Mengapa Gunungkidul?</span>
+
+            <h2 class="tentang_title">
+                Keindahan yang Belum Terjamah, Keheningan yang Mewah.
+            </h2>
+
+            <p class="tentang_desc">
+                Gunungkidul bukan sekadar destinasi; ia adalah simfoni alam yang terbentuk 
+                selama jutaan tahun. Kami menghadirkan kurasi perjalanan eksklusif yang 
+                memadukan petualangan fisik dengan ketenangan batin.
+            </p>
+
+            <ul class="tentang_features">
+                <li class="feature_item">
+                    <div class="feature_icon">
+                        <img src="../asset/icons/privasi.png" alt="privasi icon">
+                    </div>
+                    <div class="feature_text">
+                        <span class="feature_title">Privasi Pantai Selatan</span>
+                        <span class="feature_desc">Akses ke pantai-pantai tersembunyi jauh dari keramaian turis massal.</span>
+                    </div>
+                </li>
+                <li class="feature_item">
+                    <div class="feature_icon">
+                        <img src="../asset/icons/eksplorasi.png" alt="eksplorasi icon">
+                    </div>
+                    <div class="feature_text">
+                        <span class="feature_title">Eksplorasi Perut Bumi</span>
+                        <span class="feature_desc">Pemandu bersertifikat untuk petualangan goa yang aman dan berkesan.</span>
+                    </div>
+                </li>
+                <li class="feature_item">
+                    <div class="feature_icon">
+                        <img src="../asset/icons/warisan.png" alt="warisan icon">
+                    </div>
+                    <div class="feature_text">
+                        <span class="feature_title">Warisan Geologi Dunia</span>
+                        <span class="feature_desc">Menyaksikan formasi karst yang diakui secara internasional oleh UNESCO.</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tentang_right">
+            <div class="destination_card">
+                <div class="card_image">
+                    <img src="../asset/image/pantai-wediombo.png" alt="Pantai Wediombo">
+                </div>
+                <div class="card_label">
+                    <span class="card_sublabel">Highlight Destinasi</span>
+                    <span class="card_name">Pantai Wediombo</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="destinasi">
+    <div class="destinasi_container">
+
+        <div class="destinasi_header">
+            <div class="destinasi_title_wrap">
+                <h2 class="destinasi_title">Kurasi Destinasi</h2>
+                <span class="destinasi_subtitle">Pilihan Kami</span>
+            </div>
+
+            <div class="destinasi_filter">
+                <button class="filter_btn filter_btn--active" data-filter="semua">Semua</button>
+                <button class="filter_btn" data-filter="pantai">Pantai</button>
+                <button class="filter_btn" data-filter="goa">Goa</button>
+                <button class="filter_btn" data-filter="bukit">Bukit</button>
+                <button class="filter_btn" data-filter="air-terjun">Air Terjun</button>
+            </div>
+        </div>
+
+        <div class="destinasi_grid">
+
+            <div class="destinasi_card" data-category="goa">
+                <div class="card_img_wrap">
+                    <span class="card_badge badge--goa">Goa & Karst</span>
+                    <img src="../asset/image/goa-jomblang.png" alt="Goa Jomblang">
+                </div>
+                <div class="card_body">
+                    <div class="card_rating">
+                        <span class="star">★</span>
+                        <span class="rating_score">4.9</span>
+                        <span class="rating_count">(120+ Review)</span>
+                    </div>
+                    <h3 class="card_name">Goa Jomblang</h3>
+                    <p class="card_desc">Saksikan fenomena Cahaya Surga yang menembus kedalaman goa vertikal purba.</p>
+                    <div class="card_footer">
+                        <div class="card_price">
+                            <span class="price_label">Harga Tiket</span>
+                            <span class="price_value">Mulai Rp 500k</span>
+                        </div>
+                        <a href="Pemesanan.html" class="card_arrow">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destinasi_card" data-category="pantai">
+                <div class="card_img_wrap">
+                    <span class="card_badge badge--pantai">Pantai</span>
+                    <img src="../asset/image/pantai-indrayanti.png" alt="Pantai Indrayanti">
+                </div>
+                <div class="card_body">
+                    <div class="card_rating">
+                        <span class="star">★</span>
+                        <span class="rating_score">4.7</span>
+                        <span class="rating_count">(2.4k+ Review)</span>
+                    </div>
+                    <h3 class="card_name">Pantai Indrayanti</h3>
+                    <p class="card_desc">Keindahan pesisir dengan pasir putih bersih dan restoran tepi laut yang ikonik.</p>
+                    <div class="card_footer">
+                        <div class="card_price">
+                            <span class="price_label">Harga Tiket</span>
+                            <span class="price_value">Mulai Rp 15k</span>
+                        </div>
+                        <a href="Pemesanan.html" class="card_arrow">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destinasi_card" data-category="bukit">
+                <div class="card_img_wrap">
+                    <span class="card_badge badge--bukit">Bukit & Gunung</span>
+                    <img src="../asset/image/gunung-api-purba.png" alt="Gunung Api Purba">
+                </div>
+                <div class="card_body">
+                    <div class="card_rating">
+                        <span class="star">★</span>
+                        <span class="rating_score">4.8</span>
+                        <span class="rating_count">(850+ Review)</span>
+                    </div>
+                    <h3 class="card_name">Gunung Api Purba</h3>
+                    <p class="card_desc">Mendaki formasi batuan vulkanik jutaan tahun untuk pemandangan senja terbaik.</p>
+                    <div class="card_footer">
+                        <div class="card_price">
+                            <span class="price_label">Harga Tiket</span>
+                            <span class="price_value">Mulai Rp 20k</span>
+                        </div>
+                        <a href="Pemesanan.html" class="card_arrow">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION: Temukan Petualanganmu -->
+<section class="kategori">
+    <div class="kategori_container">
+        <h2 class="kategori_title">Temukan Petualanganmu</h2>
+
+        <div class="kategori_grid">
+            <a href="Paket-Wisata.html?filter=pantai" class="kategori_item">
+                <div class="kategori_icon">
+                    <img src="../asset/icons/pantai.png" alt="Pantai & Laut">
+                </div>
+                <span class="kategori_label">Pantai & Laut</span>
+            </a>
+            <a href="Paket-Wisata.html?filter=goa" class="kategori_item">
+                <div class="kategori_icon">
+                    <img src="../asset/icons/goa.png" alt="Goa & Karst">
+                </div>
+                <span class="kategori_label">Goa & Karst</span>
+            </a>
+            <a href="Paket-Wisata.html?filter=bukit" class="kategori_item">
+                <div class="kategori_icon">
+                    <img src="../asset/icons/bukit.png" alt="Bukit & Gunung">
+                </div>
+                <span class="kategori_label">Bukit & Gunung</span>
+            </a>
+            <a href="Paket-Wisata.html?filter=air-terjun" class="kategori_item">
+                <div class="kategori_icon">
+                    <img src="../asset/icons/air-terjun.png" alt="Air Terjun & Sungai">
+                </div>
+                <span class="kategori_label">Air Terjun & Sungai</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION: Galeri Eksplorasi -->
+<section class="galeri">
+    <div class="galeri_container">
+
+        <div class="galeri_header">
+            <span class="galeri_label">Galeri Eksplorasi</span>
+            <h2 class="galeri_title">Keindahan yang Nyata</h2>
+        </div>
+
+        <div class="galeri_grid">
+            <div class="galeri_item galeri_item--large">
+                <img src="../asset/image/hutan-wanagama.png" alt="Hutan Wanagama">
+                <div class="galeri_caption">Hutan Wanagama</div>
+            </div>
+            <div class="galeri_item">
+                <img src="../asset/image/sri-gethuk.png" alt="Sri Gethuk">
+                <div class="galeri_caption">Sri Gethuk</div>
+            </div>
+            <div class="galeri_item">
+                <img src="../asset/image/goa-pindul.png" alt="Goa Pindul">
+                <div class="galeri_caption">Goa Pindul</div>
+            </div>
+            <div class="galeri_item galeri_item--large">
+                <img src="../asset/image/pesisir-selatan.png" alt="Pesisir Selatan">
+                <div class="galeri_caption">Pesisir Selatan</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- SECTION: Info Tips -->
+<section class="tips">
+    <div class="tips_container">
+
+        <div class="tips_grid">
+            <div class="tips_card">
+                <div class="tips_icon">
+                    <img src="../assets/icons/waktu.png" alt="Waktu Terbaik">
+                </div>
+                <h3 class="tips_title">Waktu Terbaik</h3>
+                <p class="tips_desc">Mei hingga September adalah waktu ideal untuk mengunjungi pantai dan goa untuk mendapatkan cahaya terbaik.</p>
+            </div>
+
+            <div class="tips_card">
+                <div class="tips_icon">
+                    <img src="../assets/icons/jarak.png" alt="Jarak Tempuh">
+                </div>
+                <h3 class="tips_title">Jarak Tempuh</h3>
+                <p class="tips_desc">Sekitar 1.5 – 2 jam perjalanan dari pusat Kota Yogyakarta. Kami menyediakan layanan antar-jemput privat.</p>
+            </div>
+
+            <div class="tips_card">
+                <div class="tips_icon">
+                    <img src="../assets/icons/perlengkapan.png" alt="Perlengkapan">
+                </div>
+                <h3 class="tips_title">Perlengkapan</h3>
+                <p class="tips_desc">Gunakan alas kaki anti-slip untuk eksplorasi goa dan bawa pakaian ganti serta perlindungan matahari.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SECTION: Testimoni -->
+<section class="testimoni">
+    <div class="testimoni_container">
+
+        <div class="testimoni_header">
+            <span class="testimoni_label">Suara Penjelajah</span>
+            <h2 class="testimoni_title">Kesan yang Tak Terlupakan</h2>
+        </div>
+
+        <div class="testimoni_grid">
+
+            <div class="testimoni_card">
+                <div class="testimoni_top">
+                    <img src="../asset/image/sarah.jpg" alt="Sarah J." class="testimoni_avatar">
+                    <div class="testimoni_stars">★★★★★</div>
+                </div>
+                <p class="testimoni_quote">"Eksplorasi Goa Jomblang adalah pengalaman spiritual bagi saya. Pengorganisasian tim sangat profesional dan personal."</p>
+                <span class="testimoni_name">Sarah J. — Travel Blogger</span>
+            </div>
+
+            <div class="testimoni_card">
+                <div class="testimoni_top">
+                    <img src="../asset/image/markus.jpg" alt="Markus W." class="testimoni_avatar">
+                    <div class="testimoni_stars">★★★★★</div>
+                </div>
+                <p class="testimoni_quote">"Saya telah berkeliling dunia. Tapi keasrian pantai-pantai di Gunungkidul memiliki daya tarik magis tersendiri."</p>
+                <span class="testimoni_name">Markus W. — Fotografer Landscape</span>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- SECTION: CTA -->
+<section class="cta">
+    <div class="cta_container">
+        <h2 class="cta_title">Siap Memulai Petualangan?</h2>
+        <p class="cta_desc">Reservasi sekarang untuk mendapatkan slot eksklusif di destinasi pilihan Anda. Kami membantu merancang itinerary yang sempurna untuk Anda.</p>
+        <div class="cta_actions">
+            <a href="Pemesanan.html" class="cta_btn_primary">Pesan Paket Wisata</a>
+            <a href="tentang.html" class="cta_btn_outline">Hubungi Kami</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer_container">
+
+        <div class="footer_brand">
+            <div class="footer_logo">
+                <img src="../asset/image/logo.png" alt="logo" class="footer_logo_img">
+                <div class="footer_logo_text">
+                    <span class="footer_logo_name">Gunungkidul</span>
+                    <span class="footer_logo_tagline">Natural Explore</span>
+                </div>
+            </div>
+            <p class="footer_brand_desc">Menghubungkan Anda dengan kemurnian alam Yogyakarta melalui kurasi wisata butik yang mendalam dan berkesan.</p>
+            <div class="footer_socials">
+                <a href="#" class="social_btn" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="#" class="social_btn" aria-label="Share">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="18" cy="5" r="2" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="6" cy="12" r="2" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="18" cy="19" r="2" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 10.5l8-4M8 13.5l8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer_col">
+            <h4 class="footer_col_title">Navigasi</h4>
+            <ul class="footer_links">
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="Paket-Wisata.html">Paket Wisata</a></li>
+                <li><a href="Pemesanan.html">Pemesanan</a></li>
+            </ul>
+        </div>
+
+        <div class="footer_col">
+            <h4 class="footer_col_title">Destinasi</h4>
+            <ul class="footer_links">
+                <li><a href="#">Pantai & Laut</a></li>
+                <li><a href="#">Goa & Karst</a></li>
+                <li><a href="#">Bukit & Gunung</a></li>
+                <li><a href="#">Air Terjun</a></li>
+            </ul>
+        </div>
+
+        <div class="footer_col">
+            <h4 class="footer_col_title">Kontak Kami</h4>
+            <ul class="footer_contact">
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    Jl. Wonosari - Palyan KM 5, Gunungkidul, Yogyakarta
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4h16v16H4z" stroke="none"/>
+                        <path d="M3 8l9 6 9-6M3 6h18v12H3V6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    info@gunungkidul-explore.com
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    +62 812 3456 7890
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer_bottom">
+        <span>© 2024 Gunungkidul Natural Explore. All rights reserved.</span>
+        <div class="footer_bottom_links">
+            <a href="#">Kebijakan Privasi</a>
+            <a href="#">Syarat & Ketentuan</a>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/beranda.js"></script>
 </body>
 </html>
