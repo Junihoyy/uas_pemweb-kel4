@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gunungkidul</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      color:#333;
+    }
+
+    /* NAVBAR */
+    nav{
+      background:#234232;
+      padding:15px 50px;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      color:white;
+      font-size:24px;
+      font-weight:bold;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+    }
+
+    /* HERO */
+    .hero{
+      height:400px;
+      background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200') center/cover;
+      
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+
+      color:white;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      font-size:18px;
+    }
+
+    /* TENTANG */
+    .tentang{
+      padding:60px 50px;
+
+      display:flex;
+      gap:40px;
+      align-items:center;
+    }
+
+    .tentang img{
+      width:400px;
+      border-radius:10px;
+    }
+
+    .tentang-text h2{
+      margin-bottom:15px;
+      font-size:35px;
+      color:#234232;
+    }
+
+    .tentang-text p{
+      line-height:1.8;
+    }
+
+    /* CARD */
+    .wisata{
+      padding:60px 50px;
+      background:#e8efe8;
+    }
+
+    .wisata h2{
+      text-align:center;
+      margin-bottom:40px;
+      font-size:35px;
+      color:#234232;
+    }
+
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:white;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+
+    .card-body{
+      padding:20px;
+    }
+
+    .card-body h3{
+      margin-bottom:10px;
+      color:#234232;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#234232;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+
+      .tentang{
+        flex-direction:column;
+      }
+
+      .tentang img{
+        width:100%;
+      }
+
+      .card-container{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+
+    <div class="logo">
+      Gunungkidul
+    </div>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Tentang</a></li>
+      <li><a href="#">Wisata</a></li>
+      <li><a href="#">Kontak</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <h1>Gunungkidul</h1>
+
+    <p>
+      Surga wisata alam di Yogyakarta
+    </p>
+
+  </section>
+
+  <!-- TENTANG -->
+  <section class="tentang">
+
+    <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=700" alt="Gunungkidul">
+
+    <div class="tentang-text">
+
+      <h2>Tentang Gunungkidul</h2>
+
+      <p>
+        Gunungkidul merupakan salah satu kabupaten di Daerah Istimewa Yogyakarta yang terkenal dengan pantai indah, gua karst, dan wisata alam yang memukau.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- WISATA -->
+  <section class="wisata">
+
+    <h2>Wisata Populer</h2>
+
+    <div class="card-container">
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500">
+
+        <div class="card-body">
+
+          <h3>Pantai</h3>
+
+          <p>
+            Pantai pasir putih yang indah dan alami.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=500">
+
+        <div class="card-body">
+
+          <h3>Gua Karst</h3>
+
+          <p>
+            Wisata petualangan gua yang menarik.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500">
+
+        <div class="card-body">
+
+          <h3>Bukit Hijau</h3>
+
+          <p>
+            Pemandangan alam hijau yang menenangkan.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2025 Gunungkidul
+    </p>
+
+  </footer>
+
+</body>
+</html>
