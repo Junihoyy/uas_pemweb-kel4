@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan - Gunungkidul Natural Explorer</title>
+    <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/beranda.css">
+    <link rel="stylesheet" href="../style/paket_wisata.css">
+    <link rel="stylesheet" href="../style/pemesanan.css">
+    <script>
+        function validateForm() {
+            const nama = document.getElementById('nama').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const paket = document.getElementById('paket').value;
+            const tanggal = document.getElementById('tanggal').value;
+
+            if (!nama || !email || !paket || !tanggal) {
+                alert('Semua field harus diisi!');
+                return false;
+            }
+
+            alert('Pemesanan berhasil! Terima kasih telah memesan dengan kami.');
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="navbar_container">
+
+            <div class="logo_navbar">
+                <img src="../asset/image/logo.png" class="logo_img" alt="logo">
+                <div class="logo_text">
+                    <div class="logo_name">Gunung Kidul</div>
+                    <div class="tagline_logo">Natural Explorer</div>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav_menu" id="nav_menu">
+                <li class="nav_item">
+                    <a href="beranda.html" class="nav_link">Beranda</a>
+                </li>
+                <li class="nav_item">
+                    <a href="tentang.html" class="nav_link">Tentang</a>
+                </li>
+                <li class="nav_item">
+                    <a href="paket_wisata.html" class="nav_link">Paket Wisata</a>
+                </li>
+                <li class="nav_item">
+                    <a href="Pemesanan.html" class="nav_link nav_link--active">Pemesanan</a>
+                </li>
+            </ul>
+            <a href="Pemesanan.html" class="button_cta">Pesan Sekarang</a>
+        </div>
+    </nav>
+
+    <section class="paket_hero">
+      <div class="paket_hero_bg">
+        <img src="../asset/image/paket_hero.png" alt="Paket Wisata Gunungkidul">
+      </div>
+      <div class="paket_hero_overlay"></div>
+      
+      <div class="paket_hero_content">
+        <h1 class="paket_hero_title">Pesan sekarang!</h1>
+        <div class="paket_hero_breadcrumb">
+          <a href="beranda.html">Beranda</a>
+          <span>›</span>
+          <span>Pemesanan</span>
+        </div>
+        </div>
+    </section>
+    
+    <!-- form pemesanan -->
+    <form name="pemesanan" action="pemesanan.html" method="post" onsubmit="return validateForm()">
+        <div class="form-container">
+            <h2>Form Pemesanan</h2>
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="paket">Paket Wisata:</label>
+            <select id="paket" name="paket" required>
+                <option value="">Pilih Paket Wisata</option>
+                <option value="paket1">Goa Jomblang</option>
+                <option value="paket2">Pantai Indrayanti</option>
+                <option value="paket3">Gunung Api Purba</option>
+                <option value="paket4">Pantai Wediombo</option>
+                <option value="paket5">Goa Pindul</option>
+                <option value="paket6">Air Terjun Sri Gethuk</option>
+            </select>
+            
+            <label for="tanggal">Tanggal Kunjungan:</label>
+            <input type="date" id="tanggal" name="tanggal" required>
+
+                <div class="payment-section">
+                    <label for="payment">Metode Pembayaran:</label>
+                    <select id="payment" name="payment" required>
+                        <option value="">Pilih Metode Pembayaran</option>
+                        <option value="transfer">Transfer Bank</option>
+                        <option value="gopay">GoPay</option>
+                        <option value="ovo">OVO</option>
+                        <option value="dana">DANA</option>
+                        <option value="cod">Bayar di Lokasi (COD)</option>
+                    </select>
+                    <div class="form-help" id="payment_info"></div>
+                </div>
+
+            
+            <button type="submit">Pesan Sekarang</button>
+            
+            <div class="price-summary">
+                <div>Harga Paket:</div>
+                <div class="price-amount" id="price_value">-</div>
+            </div>
+            <input type="hidden" id="price_input" name="price" value="0">
+
+        </div>
+
+
+
+    </form>
+
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer_container">
+
+        <div class="footer_brand">
+            <div class="footer_logo">
+                <img src="../asset/image/logo.png" alt="logo" class="footer_logo_img">
+                <div class="footer_logo_text">
+                    <span class="footer_logo_name">Gunungkidul</span>
+                    <span class="footer_logo_tagline">Natural Explore</span>
+                </div>
+            </div>
+            <p class="footer_brand_desc">Menghubungkan Anda dengan kemurnian alam Yogyakarta melalui kurasi wisata butik yang mendalam dan berkesan.</p>
+            <div class="footer_socials">
+                <a href="#" class="social_btn" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="#" class="social_btn" aria-label="Share">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="18" cy="5" r="2" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="6" cy="12" r="2" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="18" cy="19" r="2" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 10.5l8-4M8 13.5l8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer_col">
+            <h4 class="footer_col_title">Navigasi</h4>
+            <ul class="footer_links">
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="Paket-Wisata.html">Paket Wisata</a></li>
+                <li><a href="Pemesanan.html">Pemesanan</a></li>
+            </ul>
+        </div>
+
+        <div class="footer_col">
+            <h4 class="footer_col_title">Destinasi</h4>
+            <ul class="footer_links">
+                <li><a href="#">Pantai & Laut</a></li>
+                <li><a href="#">Goa & Karst</a></li>
+                <li><a href="#">Bukit & Gunung</a></li>
+                <li><a href="#">Air Terjun</a></li>
+            </ul>
+        </div>
+
+        <div class="footer_col">
+            <h4 class="footer_col_title">Kontak Kami</h4>
+            <ul class="footer_contact">
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    Jl. Wonosari - Palyan KM 5, Gunungkidul, Yogyakarta
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4h16v16H4z" stroke="none"/>
+                        <path d="M3 8l9 6 9-6M3 6h18v12H3V6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    info@gunungkidul-explore.com
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    +62 812 3456 7890
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer_bottom">
+        <span>© 2024 Gunungkidul Natural Explore. All rights reserved.</span>
+        <div class="footer_bottom_links">
+            <a href="#">Kebijakan Privasi</a>
+            <a href="#">Syarat & Ketentuan</a>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/beranda.js" defer></script>
+<script src="../js/pemesanan.js" defer></script>
+</body>
