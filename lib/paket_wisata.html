@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket Wisata - Gunungkidul Natural Explorer</title>
+    <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/beranda.css">
+    <link rel="stylesheet" href="../style/paket_wisata.css">
+</head>
+<body>
+
+      <nav class="navbar" id="navbar">
+        <div class="navbar_container">
+
+            <div class="logo_navbar">
+                <img src="../asset/image/logo.png" class="logo_img" alt="logo">
+                <div class="logo_text">
+                    <div class="logo_name">Gunung Kidul</div>
+                    <div class="tagline_logo">Natural Explorer</div>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav_menu" id="nav_menu">
+                <li class="nav_item">
+                    <a href="beranda.html" class="nav_link">Beranda</a>
+                </li>
+                <li class="nav_item">
+                    <a href="tentang.html" class="nav_link">Tentang</a>
+                </li>
+                <li class="nav_item">
+                    <a href="paket_wisata.html" class="nav_link nav_link--active">Paket Wisata</a>
+                </li>
+                <li class="nav_item">
+                    <a href="Pemesanan.html" class="nav_link">Pemesanan</a>
+                </li>
+            </ul>
+
+            <a href="Pemesanan.html" class="button_cta">Pesan Sekarang</a>
+
+        </div>
+    </nav>
+    <section class="paket_hero">
+      <div class="paket_hero_bg">
+        <img src="../asset/image/paket_hero.png" alt="Paket Wisata Gunungkidul">
+      </div>
+      <div class="paket_hero_overlay"></div>
+      
+      <div class="paket_hero_content">
+        <h1 class="paket_hero_title">Paket Wisata Eksklusif</h1>
+        <div class="paket_hero_breadcrumb">
+          <a href="beranda.html">Beranda</a>
+          <span>›</span>
+          <span>Paket Wisata</span>
+        </div>
+        </div>
+    </section>
+
+    <section class="destinasi">
+    <div class="destinasi_container">
+
+        <div class="destinasi_header">
+            <div class="destinasi_title_wrap">
+                <h2 class="destinasi_title">Semua Paket</h2>
+                <span class="destinasi_subtitle">Wisata Kami</span>
+            </div>
+
+            <div class="destinasi_filter">
+                <button class="filter_btn filter_btn--active" data-filter="semua">Semua</button>
+                <button class="filter_btn" data-filter="pantai">Pantai</button>
+                <button class="filter_btn" data-filter="goa">Goa</button>
+                <button class="filter_btn" data-filter="bukit">Bukit</button>
+                <button class="filter_btn" data-filter="air-terjun">Air Terjun</button>
+            </div>
+        </div>
+
+        <div class="destinasi_grid">
+
+            <!-- dari beranda -->
+            <div class="destinasi_card" data-category="goa">
+                <div class="card_img_wrap">
+                    <span class="card_badge badge--goa">Goa & Karst</span>
+                    <img src="../asset/image/goa-jomblang.png" alt="Goa Jomblang">
+                </div>
+                <div class="card_body">
+                    <div class="card_rating">
+                        <span class="star">★</span>
+                        <span class="rating_score">4.9</span>
+                        <span class="rating_count">(120+ Review)</span>
+                    </div>
+                    <h3 class="card_name">Goa Jomblang</h3>
+                    <p class="card_desc">Saksikan fenomena Cahaya Surga yang menembus kedalaman goa vertikal purba.</p>
+                    <div class="card_footer">
+                        <div class="card_price">
+                            <span class="price_label">Harga Tiket</span>
+                            <span class="price_value">Mulai Rp 500k</span>
+                        </div>
+                        <a href="Pemesanan.html" class="card_arrow">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destinasi_card" data-category="pantai">
+                <div class="card_img_wrap">
+                    <span class="card_badge badge--pantai">Pantai</span>
+                    <img src="../asset/image/pantai-indrayanti.png" alt="Pantai Indrayanti">
+                </div>
+                <div class="card_body">
+                    <div class="card_rating">
+                        <span class="star">★</span>
+                        <span class="rating_score">4.7</span>
+                        <span class="rating_count">(2.4k+ Review)</span>
+                    </div>
+                    <h3 class="card_name">Pantai Indrayanti</h3>
+                    <p class="card_desc">Keindahan pesisir dengan pasir putih bersih dan restoran tepi laut yang ikonik.</p>
+                    <div class="card_footer">
+                        <div class="card_price">
+                            <span class="price_label">Harga Tiket</span>
+                            <span class="price_value">Mulai Rp 15k</span>
+                        </div>
+                        <a href="Pemesanan.html" class="card_arrow">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destinasi_card" data-category="bukit">
+                <div class="card_img_wrap">
+                    <span class="card_badge badge--bukit">Bukit & Gunung</span>
+                    <img src="../asset/image/gunung-api-purba.png" alt="Gunung Api Purba">
+                </div>
+                <div class="card_body">
+                    <div class="card_rating">
+                        <span class="star">★</span>
+                        <span class="rating_score">4.8</span>
+                        <span class="rating_count">(850+ Review)</span>
+                    </div>
+                    <h3 class="card_name">Gunung Api Purba</h3>
+                    <p class="card_desc">Mendaki formasi batuan vulkanik jutaan tahun untuk pemandangan senja terbaik.</p>
+                    <div class="card_footer">
+                        <div class="card_price">
+                            <span class="price_label">Harga Tiket</span>
+                            <span class="price_value">Mulai Rp 20k</span>
+                        </div>
+                        <a href="Pemesanan.html" class="card_arrow">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card tambahan -->
+            <div class="destinasi_card" data-category="pantai">
+                <div class="card_img_wrap">
+                    <span class="card_badge badge--pantai">Pantai</span>
+                    <img src="../asset/image/pantai-wediombo.png" alt="Pantai Wediombo">
+                </div>
+                <div class="card_body">
+                    <div class="card_rating">
+                        <span class="star">★</span>
+                        <span class="rating_score">4.8</span>
+                        <span class="rating_count">(980+ Review)</span>
+                    </div>
+                    <h3 class="card_name">Pantai Wediombo</h3>
+                    <p class="card_desc">Pantai tersembunyi dengan kolam alami di tepi tebing karang yang memukau.</p>
+                    <div class="card_footer">
+                        <div class="card_price">
+                            <span class="price_label">Harga Tiket</span>
+                            <span class="price_value">Mulai Rp 10k</span>
+                        </div>
+                        <a href="Pemesanan.html" class="card_arrow">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destinasi_card" data-category="goa">
+                <div class="card_img_wrap">
+                    <span class="card_badge badge--goa">Goa & Karst</span>
+                    <img src="../asset/image/goa-pindul.png" alt="Goa Pindul">
+                </div>
+                <div class="card_body">
+                    <div class="card_rating">
+                        <span class="star">★</span>
+                        <span class="rating_score">4.6</span>
+                        <span class="rating_count">(3.1k+ Review)</span>
+                    </div>
+                    <h3 class="card_name">Goa Pindul</h3>
+                    <p class="card_desc">Cave tubing menyusuri sungai bawah tanah dengan stalaktit dan stalagmit menakjubkan.</p>
+                    <div class="card_footer">
+                        <div class="card_price">
+                            <span class="price_label">Harga Tiket</span>
+                            <span class="price_value">Mulai Rp 35k</span>
+                        </div>
+                        <a href="Pemesanan.html" class="card_arrow">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destinasi_card" data-category="air-terjun">
+                <div class="card_img_wrap">
+                    <span class="card_badge badge--air-terjun">Air Terjun</span>
+                    <img src="../asset/image/sri-gethuk.png" alt="Air Terjun Sri Gethuk">
+                </div>
+                <div class="card_body">
+                    <div class="card_rating">
+                        <span class="star">★</span>
+                        <span class="rating_score">4.7</span>
+                        <span class="rating_count">(1.5k+ Review)</span>
+                    </div>
+                    <h3 class="card_name">Air Terjun Sri Gethuk</h3>
+                    <p class="card_desc">Air terjun eksotis di tepi Sungai Oya dikelilingi tebing hijau yang menyejukkan.</p>
+                    <div class="card_footer">
+                        <div class="card_price">
+                            <span class="price_label">Harga Tiket</span>
+                            <span class="price_value">Mulai Rp 25k</span>
+                        </div>
+                        <a href="Pemesanan.html" class="card_arrow">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script src="../js/beranda.js"></script>  
+</body>
+</html>

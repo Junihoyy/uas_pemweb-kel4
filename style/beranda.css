@@ -19,6 +19,19 @@ body {
     overflow-x: hidden;
 }
 
+.aboutList {
+    display: flex;
+    gap: 4vh;
+    justify-content: center;
+    text-align: center;
+}
+
+.listText {
+    color: rgb(45, 129, 197);
+    font-size: 5vh;
+    font-weight: bolder;
+}
+
 /* ========================================
    NAVBAR
 ======================================== */
@@ -30,7 +43,6 @@ body {
     z-index: 1000;
     padding: 1rem 2rem;
     background-color: transparent;
-    transition: background-color var(--transition), box-shadow var(--transition);
 }
 
 
@@ -51,8 +63,6 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .logo_img {
@@ -73,7 +83,6 @@ body {
     color: var(--color-white);
     font-weight: 700;
     line-height: 1;
-    transition: color var(--transition);
 }
 
 .navbar--scrolled .logo_name { color: var(--color-primary); }
@@ -531,6 +540,8 @@ body {
     align-items: center;
 }
 
+
+
 .destination_card {
     width: 400px;
     height: 520px;
@@ -539,6 +550,16 @@ body {
     overflow: hidden;
     position: relative;
     transform: rotate(0deg);
+    box-shadow: 0 24px 64px rgba(1, 45, 29, 0.25);
+}
+
+.destination_card_2 {
+    height: 520px;
+    background-color: var(--color-primary);
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    transform: rotate(-2deg);
     box-shadow: 0 24px 64px rgba(1, 45, 29, 0.25);
 }
 
@@ -1060,6 +1081,7 @@ body {
     margin: 0 auto;
 }
 
+
 .testimoni_header {
     text-align: center;
     margin-bottom: 64px;
@@ -1089,6 +1111,12 @@ body {
     gap: 32px;
 }
 
+.testimoni_grid_2 {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
 .testimoni_card {
     display: flex;
     flex-direction: column;
@@ -1108,6 +1136,15 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--color-cream);
+}
+
+.testimoni_avatar_2 {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-cream);
+    margin: 0 auto;
 }
 
 .testimoni_stars {
@@ -1135,6 +1172,19 @@ body {
     padding: 6px 16px;
     border-radius: 999px;
     align-self: flex-start;
+}
+
+.testimoni_name_2 {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    padding: 6px 16px;
+    border-radius: 999px;
+    align-self: flex-start;
+    margin: 0 auto;
 }
 
 /* Divider antara tips dan testimoni */
@@ -1405,6 +1455,13 @@ body {
 
 .footer_bottom_links a:hover {
     color: var(--color-gold);
+}
+
+.quote-box {
+    background: #fff;
+    padding: 16px 20px;
+    border-left: 4px rgb(31, 156, 20) solid;
+    border-radius: 8px;
 }
 
 /* Responsive */
