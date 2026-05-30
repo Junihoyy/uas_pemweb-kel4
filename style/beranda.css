@@ -664,8 +664,22 @@ body {
     gap: 24px;
 }
 
+.tentang_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
 /* Card */
 .destinasi_card {
+    background: var(--color-white);
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.tentang_card {
     background: var(--color-white);
     border-radius: 16px;
     border: 1px solid rgba(0,0,0,0.08);
