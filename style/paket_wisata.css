@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('./global.css');
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    overflow-x: hidden;
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    transition: background-color var(--transition), box-shadow var(--transition);
+}
+
+
+.navbar--scrolled {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.logo_navbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logo_img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.logo_text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.logo_name {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--color-white);
+    font-weight: 700;
+    line-height: 1;
+    transition: color var(--transition);
+}
+
+.navbar--scrolled .logo_name { color: var(--color-primary); }
+
+.tagline_logo {
+    font-size: 10px;
+    color: var(--color-gold-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color var(--transition);
+}
+
+.navbar--scrolled .tagline_logo { color: var(--color-secondary); }
+
+.nav_menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav_link {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    position: relative;
+    transition: color var(--transition);
+}
+
+.navbar--scrolled .nav_link { color: var(--color-dark); }
+
+.nav_link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-gold);
+    transition: width var(--transition);
+}
+
+.nav_link:hover::after,
+.nav_link--active::after { width: 100%; }
+
+.nav_link--active { color: var(--color-gold); }
+.navbar--scrolled .nav_link--active { color: var(--color-secondary); }
+
+.button_cta {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: var(--color-gold);
+    color: var(--color-dark);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 24px;
+    text-decoration: none;
+    transition: background-color var(--transition), transform 0.15s;
+}
+
+.button_cta:hover {
+    background-color: var(--color-gold-light);
+    transform: translateY(-2px);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 4px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.navbar--scrolled .hamburger span { background: var(--color-dark); }
+
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+
+/* ========================================
+   HERO PAKET WISATA
+======================================== */
+.paket_hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.paket_hero_bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.paket_hero_bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: slowZoom 18s ease-out forwards;
+}
+
+@keyframes slowZoom {
+    from { transform: scale(1.05); }
+    to   { transform: scale(1.00); }
+}
+
+.paket_hero_overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(to top, rgba(1,20,10,0.85) 0%, rgba(1,20,10,0.5) 50%, rgba(1,20,10,0.35) 100%);
+}
+
+.paket_hero_content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0 24px;
+    max-width: 720px;
+    animation: fadeUp 0.9s ease 0.3s both;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.paket_hero_badge {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-dark);
+    background: var(--color-gold);
+    padding: 7px 18px;
+    border-radius: 999px;
+}
+
+.paket_hero_title {
+    font-family: var(--font-heading);
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1.1;
+    margin: 0;
+}
+
+.paket_hero_desc {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--color-muted);
+    margin: 0;
+    max-width: 520px;
+}
+
+.paket_hero_breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 8px;
+}
+
+.paket_hero_breadcrumb a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.paket_hero_breadcrumb a:hover {
+    color: var(--color-gold);
+}
+
+.paket_hero_breadcrumb span:last-child {
+    color: var(--color-gold);
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .paket_hero_title {
+        font-size: clamp(32px, 8vw, 48px);
+    }
+
+    .paket_hero_desc {
+        font-size: 14px;
+    }
+}
+
+.badge--air-terjun {
+    background: rgba(1, 45, 29, 0.85);
+    color: var(--color-gold-light);
+}
