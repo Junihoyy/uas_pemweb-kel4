@@ -9,8 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const paketSelect = document.getElementById('paket');
+    const quantityInput = document.getElementById('jumlah');
     const priceEl = document.getElementById('price_value');
+    const quantityValueEl = document.getElementById('quantity_value');
+    const totalEl = document.getElementById('total_value');
     const priceInput = document.getElementById('price_input');
+    const totalInput = document.getElementById('total_input');
     const paymentSelect = document.getElementById('payment');
     const paymentInfo = document.getElementById('payment_info');
     const form = document.forms['pemesanan'];
@@ -21,9 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updatePrice() {
         const val = paketSelect.value;
+        const quantity = Math.max(1, Number(quantityInput.value) || 1);
         const price = prices[val] || 0;
+        const total = price * quantity;
+
         priceEl.textContent = price ? `Rp ${formatRupiah(price)}` : '-';
+        quantityValueEl.textContent = quantity;
+        totalEl.textContent = total ? `Rp ${formatRupiah(total)}` : '-';
+
         priceInput.value = price;
+        totalInput.value = total;
     }
 
     function updatePaymentInfo() {
@@ -44,12 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     paketSelect.addEventListener('change', updatePrice);
+    quantityInput.addEventListener('input', updatePrice);
     paymentSelect.addEventListener('change', updatePaymentInfo);
 
     form.addEventListener('submit', (e) => {
         const price = Number(priceInput.value || 0);
+        const total = Number(totalInput.value || 0);
         const payment = paymentSelect.value;
-        if (price <= 0) {
+        if (price <= 0 || total <= 0) {
             e.preventDefault();
             alert('Silakan pilih paket wisata terlebih dahulu.');
             return false;
@@ -59,8 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Silakan pilih metode pembayaran.');
             return false;
         }
-        // allow form to submit; in a real app we'd process payment here
-        alert(`Pemesanan berhasil! Total yang harus dibayar: Rp ${formatRupiah(price)}. Metode: ${payment.toUpperCase()}`);
+        alert(`Pemesanan berhasil! Total yang harus dibayar: Rp ${formatRupiah(total)}. Metode: ${payment.toUpperCase()}`);
         return true;
     });
 
