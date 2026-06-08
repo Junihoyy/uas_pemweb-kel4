@@ -31,9 +31,6 @@ body {
     font-weight: bolder;
 }
 
-/* ========================================
-   NAVBAR
-======================================== */
 .navbar {
     position: fixed;
     top: 0;
@@ -145,9 +142,6 @@ body {
 
 .navbar--scrolled .hamburger span { background: var(--color-dark); }
 
-/* ========================================
-   HERO SECTION
-======================================== */
 .hero {
     position: relative;
     width: 100%;
@@ -344,7 +338,7 @@ body {
     .hamburger { display: flex; }
 
     .hero_content {
-        padding: 0 24px 48px;
+        padding: 100px 24px 48px;
         max-width: 900px;
     }
 
@@ -356,9 +350,6 @@ body {
     .stat_divider { display: none; }
 }
 
-/* ========================================
-   TENTANG / WHY SECTION
-======================================== */
 .tentang {
     background-color: var(--color-cream);
     padding: 100px 64px;
@@ -713,9 +704,6 @@ body {
     height: 16px;
 }
 
-/* ========================================
-   KATEGORI SECTION
-======================================== */
 .kategori {
     background-color: var(--color-primary);
     padding: 64px;
@@ -779,9 +767,6 @@ body {
     font-weight: 500;
 }
 
-/* ========================================
-   GALERI SECTION
-======================================== */
 .galeri {
     background-color: var(--color-cream);
     padding: 100px 64px;
@@ -850,9 +835,6 @@ body {
     letter-spacing: 0.05em;
 }
 
-/* ========================================
-   TIPS SECTION
-======================================== */
 .tips {
     background-color: var(--color-cream);
     padding: 80px 64px;
@@ -908,9 +890,6 @@ body {
     margin: 0;
 }
 
-/* ========================================
-   TESTIMONI SECTION
-======================================== */
 .testimoni {
     background-color: var(--color-white);
     padding: 100px 64px;
@@ -1035,9 +1014,6 @@ body {
     border-radius: 999px;
 }
 
-/* ========================================
-   CTA SECTION
-======================================== */
 .cta {
     background-color: var(--color-cream);
     padding: 64px;
@@ -1107,9 +1083,6 @@ body {
     text-decoration: none;
 }
 
-/* ========================================
-   FOOTER
-======================================== */
 .footer {
     background-color: var(--color-primary);
     padding: 80px 64px 0;
@@ -1269,9 +1242,7 @@ body {
     border-radius: 8px;
 }
 
-/* ========================================
-   RESPONSIVE
-======================================== */
+
 @media (max-width: 768px) {
     .cta {
         padding: 24px;
