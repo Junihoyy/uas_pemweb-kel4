@@ -1,81 +1,103 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const prices = {
-        paket1: 500000,
-        paket2: 15000,
-        paket3: 20000,
-        paket4: 10000,
-        paket5: 35000,
-        paket6: 25000
-    };
+// --- FUNGSI MENDAPATKAN HARGA PAKET ---
+function ambilHargaPaket(namaPaket) {
+    if (namaPaket == "paket1") {
+        return 500000;
+    } else if (namaPaket == "paket2") {
+        return 15000;
+    } else if (namaPaket == "paket3") {
+        return 20000;
+    } else if (namaPaket == "paket4") {
+        return 10000;
+    } else if (namaPaket == "paket5") {
+        return 35000;
+    } else if (namaPaket == "paket6") {
+        return 25000;
+    } else {
+        return 0;
+    }
+}
 
-    const paketSelect = document.getElementById('paket');
-    const quantityInput = document.getElementById('jumlah');
-    const priceEl = document.getElementById('price_value');
-    const quantityValueEl = document.getElementById('quantity_value');
-    const totalEl = document.getElementById('total_value');
-    const priceInput = document.getElementById('price_input');
-    const totalInput = document.getElementById('total_input');
-    const paymentSelect = document.getElementById('payment');
-    const paymentInfo = document.getElementById('payment_info');
-    const form = document.forms['pemesanan'];
 
-    function formatRupiah(num) {
-        return num.toLocaleString('id-ID');
+// --- FUNGSI MENGHITUNG DAN MENAMPILKAN HARGA ---
+function hitungHarga() {
+    var paketDipilih = document.getElementById("paket").value;
+    var jumlahTiket = Number(document.getElementById("jumlah").value);
+
+    if (jumlahTiket < 1) {
+        jumlahTiket = 1;
     }
 
-    function updatePrice() {
-        const val = paketSelect.value;
-        const quantity = Math.max(1, Number(quantityInput.value) || 1);
-        const price = prices[val] || 0;
-        const total = price * quantity;
+    var hargaSatuan = ambilHargaPaket(paketDipilih);
+    var totalHarga = hargaSatuan * jumlahTiket;
 
-        priceEl.textContent = price ? `Rp ${formatRupiah(price)}` : '-';
-        quantityValueEl.textContent = quantity;
-        totalEl.textContent = total ? `Rp ${formatRupiah(total)}` : '-';
-
-        priceInput.value = price;
-        totalInput.value = total;
+    if (hargaSatuan == 0) {
+        document.getElementById("price_value").innerText = "-";
+    } else {
+        document.getElementById("price_value").innerText = "Rp " + hargaSatuan;
     }
 
-    function updatePaymentInfo() {
-        const method = paymentSelect.value;
-        if (!method) {
-            paymentInfo.textContent = '';
-            return;
-        }
-        if (method === 'transfer') {
-            paymentInfo.innerHTML = `Silakan transfer ke <strong>BNI 123-456-789 a.n. Gunungkidul Explore</strong>. Konfirmasi via email setelah transfer.`;
-        } else if (method === 'gopay' || method === 'ovo' || method === 'dana') {
-            paymentInfo.innerHTML = `Pilih aplikasi dompet digital Anda (${method.toUpperCase()}) dan selesaikan pembayaran saat checkout.`;
-        } else if (method === 'cod') {
-            paymentInfo.innerHTML = `Bayar di lokasi (Cash on Arrival). Pastikan membawa bukti pemesanan.`;
-        } else {
-            paymentInfo.textContent = '';
-        }
+    document.getElementById("quantity_value").innerText = jumlahTiket;
+
+    if (totalHarga == 0) {
+        document.getElementById("total_value").innerText = "-";
+    } else {
+        document.getElementById("total_value").innerText = "Rp " + totalHarga;
     }
 
-    paketSelect.addEventListener('change', updatePrice);
-    quantityInput.addEventListener('input', updatePrice);
-    paymentSelect.addEventListener('change', updatePaymentInfo);
+    document.getElementById("price_input").value = hargaSatuan;
+    document.getElementById("total_input").value = totalHarga;
+}
 
-    form.addEventListener('submit', (e) => {
-        const price = Number(priceInput.value || 0);
-        const total = Number(totalInput.value || 0);
-        const payment = paymentSelect.value;
-        if (price <= 0 || total <= 0) {
-            e.preventDefault();
-            alert('Silakan pilih paket wisata terlebih dahulu.');
-            return false;
-        }
-        if (!payment) {
-            e.preventDefault();
-            alert('Silakan pilih metode pembayaran.');
-            return false;
-        }
-        alert(`Pemesanan berhasil! Total yang harus dibayar: Rp ${formatRupiah(total)}. Metode: ${payment.toUpperCase()}`);
-        return true;
-    });
 
-    updatePrice();
-    updatePaymentInfo();
-});
+// --- FUNGSI MENAMPILKAN INFORMASI CARA BAYAR ---
+function tampilkanInfoPembayaran() {
+    var metodeBayar = document.getElementById("payment").value;
+    var kotakInfo = document.getElementById("payment_info");
+
+    if (metodeBayar == "transfer") {
+        kotakInfo.innerHTML = "Silakan transfer ke <strong>BNI 123-456-789 a.n. Gunungkidul Explore</strong>. Konfirmasi via email setelah transfer.";
+    } else if (metodeBayar == "gopay") {
+        kotakInfo.innerText = "Buka aplikasi GoPay Anda dan selesaikan pembayaran saat checkout.";
+    } else if (metodeBayar == "ovo") {
+        kotakInfo.innerText = "Buka aplikasi OVO Anda dan selesaikan pembayaran saat checkout.";
+    } else if (metodeBayar == "dana") {
+        kotakInfo.innerText = "Buka aplikasi DANA Anda dan selesaikan pembayaran saat checkout.";
+    } else if (metodeBayar == "cod") {
+        kotakInfo.innerText = "Bayar di lokasi (Cash on Arrival). Pastikan membawa bukti pemesanan.";
+    } else {
+        kotakInfo.innerText = "";
+    }
+}
+
+
+// --- FUNGSI VALIDASI SEBELUM FORM DIKIRIM ---
+function validasiForm() {
+    var harga = Number(document.getElementById("price_input").value);
+    var total = Number(document.getElementById("total_input").value);
+    var metodeBayar = document.getElementById("payment").value;
+
+    if (harga == 0 || total == 0) {
+        alert("Silakan pilih paket wisata terlebih dahulu.");
+        return false;
+    }
+
+    if (metodeBayar == "") {
+        alert("Silakan pilih metode pembayaran.");
+        return false;
+    }
+
+    alert("Pemesanan berhasil! Total yang harus dibayar: Rp " + total + ". Metode: " + metodeBayar.toUpperCase());
+    return true;
+}
+
+
+// --- MENGHUBUNGKAN FUNGSI KE HALAMAN ---
+window.onload = function () {
+    document.getElementById("paket").onchange = hitungHarga;
+    document.getElementById("jumlah").oninput = hitungHarga;
+    document.getElementById("payment").onchange = tampilkanInfoPembayaran;
+    document.forms["pemesanan"].onsubmit = validasiForm;
+
+    hitungHarga();
+    tampilkanInfoPembayaran();
+};
